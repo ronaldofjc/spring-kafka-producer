@@ -13,8 +13,14 @@ Consumer project: ([Link](https://github.com/ronaldofjc/spring-kafka-consumer))
 - Docker
 
 ## Kafka on Docker
+- Create Zookeeper and Kafka images
 ```shell script
   $ docker-compose config/docker/kafka/docker-compose.yml
+```
+
+- Create new topic
+```shell script
+  $ docker exec -it kafka_kafka_1 kafka-topics.sh --create --bootstrap-server kafka:9092 --topic message.topic
 ```
 
 ## Swagger
